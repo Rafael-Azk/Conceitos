@@ -1,0 +1,242 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/*------------------------------------------------------------------*/
+a,
+a:active {
+  color: white;
+  font-size: 100%;
+  font-weight: bold;
+}
+
+#logo1 {
+  font-family: argor fast scaqh;
+  font-size: 70px;
+  color: aliceblue;
+  background: linear-gradient(white, gray);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#logo2 {
+  font-size: 100px;
+  color: aliceblue;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+#canvas1 {
+  position: absolute;
+  top: 5px;
+  right: 100px;
+  border-radius: 0px 30px 0px 30px;
+  background: radial-gradient(silver, rgb(160, 160, 160), gray);
+  animation-name: caixa1;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+
+#canvas2 {
+  position: absolute;
+  top: 50px;
+  right: 0px;
+  border-radius: 30px 0px 30px 0px;
+  background: radial-gradient(rgb(39, 39, 255), rgb(23, 23, 255), blue);
+  animation-name: caixa2;
+  animation-duration: 4s;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+}
+
+@keyframes caixa1 {
+  from {
+    border-radius: 0px;
+  }
+
+  to {
+    transform: rotateZ(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes caixa2 {
+  from {
+    border-radius: 0px;
+  }
+
+  to {
+    transform: rotateZ(180deg) rotateX(180deg);
+  }
+}
+
+/*-------------------------------------------------------------------*/
+#slides {
+  background: radial-gradient(white, gray);
+  width: 100%;
+  height: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+img.imgs {
+  width: 300px;
+  height: 400px;
+}
+
+.im {
+  text-align: center;
+}
+
+/*----------------------------------------------------------------*/
+#boom {
+  background-color: white;
+  width: 100%;
+  margin-top: 10px;
+  overflow-x: hidden;
+  animation-name: boom;
+  animation-duration: 8s;
+  animation-delay: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  animation-direction: reverse;
+}
+
+#boom2 {
+  font-family: cheap fire;
+}
+
+#bo,
+#om {
+  font-family: cheap fire;
+  font-size: 200px;
+  margin-top: 20%;
+  animation-timing-function: ease-in-out;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+#bo {
+  margin-left: 140%;
+  animation-name: bo;
+  animation-duration: 4s;
+}
+
+#om {
+  margin-left: -100%;
+  animation-name: om;
+  animation-duration: 4s;
+}
+
+@keyframes bo {
+  from {
+    margin-left: -200px;
+  }
+
+  to {
+    margin-left: 140%;
+  }
+}
+
+@keyframes om {
+  from {
+    margin-left: 200px;
+  }
+
+  to {
+    margin-left: -100%;
+  }
+}
+
+@keyframes boom {
+  0% {
+    background-color: white;
+  }
+
+  100% {
+    background: radial-gradient(yellow, red)
+  }
+}
+
+h6 {
+  text-align: center;
+  color: white;
+  margin-top: 10px;
+}
+
+
+
+/*-------------------------------------------------------------------*/
+
+@media (max-width: 1199.98px) {
+
+  #bo,
+  #om {
+    display: none;
+  }
+}
+
+@media (max-width: 575.98px) {
+  #but {
+    margin-top: -30px;
+    margin-left: 80%;
+  }
+
+  img.imgs {
+    width: 200px;
+    height: 300px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767.98px) {
+  #but {
+    margin-top: -30px;
+  }
+}
+
+#boom2 {
+  font-size: 100px;
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+
+  #canvas1,
+  #canvas2 {
+    margin-right: 100px;
+  }
+}
+
+@media (min-width: 768px) and (max-width:1199.98px) {
+  #boom2 {
+    font-size: 200px;
+  }
+}
+
+@media (max-width: 298.98px) {
+  canvas {
+    width: 100px;
+    height: 100px;
+    margin-top: -100px;
+  }
+
+  #but {
+    margin-right: 20px;
+  }
+
+  #logo2 {
+    margin-left: 80px;
+  }
+
+  #boom2 {
+    font-size: 50px;
+  }
+}
